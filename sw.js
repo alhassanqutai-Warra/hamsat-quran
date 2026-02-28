@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hamsat-quran-v42-4';
+const CACHE_NAME = 'hamsat-quran-v42-4-1';
 const AUDIO_CACHE = 'hamsat-audio-v1';
 const ASSETS = [
   '/',
