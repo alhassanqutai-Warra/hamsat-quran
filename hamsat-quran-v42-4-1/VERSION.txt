@@ -1,0 +1,49 @@
+Hamsat Quran - Version 42.4.1
+═══════════════════════════════
+
+Release Date: 2026-02-28
+Platform: Cloudflare Pages
+Status: Bug Fix Release
+
+CHANGES IN V42.4.1:
+🔧 FIX: Misbaha counter no longer appears on non-misbaha pages
+🔧 FIX: Navigation icons now highlight active page (gold color + border)
+🔧 FIX: Improved color contrast for icons, text, and UI elements
+✅ Added: js/bug-fixes.js (automatic fixes on page load)
+✅ Updated: Service Worker v42-4-1 (forces cache refresh)
+
+BUG FIXES:
+1. Misbaha Visibility
+   - Problem: Floating misbaha counter appeared everywhere
+   - Fix: Now only visible on misbaha/tasbeeh pages
+   - Affected: All pages except misbaha
+
+2. Navigation Highlighting
+   - Problem: Active page not indicated in bottom nav
+   - Fix: Gold highlight + 3px top border on active tab
+   - Affected: All page navigation
+
+3. Color Contrast
+   - Problem: Poor visibility of icons and text
+   - Fix: Improved contrast ratios, better shadows
+   - Affected: Icons, buttons, text throughout app
+
+DEPLOYMENT:
+Platform: Cloudflare Pages
+URL: https://hamsatquran.com
+Auto-Deploy: Enabled
+Bandwidth: Unlimited
+
+FILES: 63 total (added bug-fixes.js)
+├── JavaScript: 30 files (~980KB)
+├── CSS: 15 files (~160KB)
+├── Data: 4 files (~3.4MB)
+├── Assets: 3 files (~183KB)
+└── Docs: 4 files
+
+CRITICAL:
+⚠️ NEVER modify js/audio.js (110,587 bytes)
+⚠️ NEVER modify css/reader.css (8,472 bytes)
+
+Previous Version: V42.4 (Navigation system)
+Next Version: V42.5 (Logo V3 fix planned)

@@ -1,0 +1,93 @@
+/**
+ * DATA LOADER STYLES
+ * Add this to your main.css or create data-loader.css
+ */
+
+/* Loading Indicator */
+.data-loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(13, 27, 42, 0.98);
+  padding: 30px 40px;
+  border-radius: 16px;
+  border: 2px solid var(--gold-primary);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+}
+
+.data-loading-indicator.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Loading Spinner */
+.data-loading-indicator .loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(212, 175, 55, 0.2);
+  border-top-color: var(--gold-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loading Text */
+.data-loading-indicator .loading-text {
+  color: var(--gold-light);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .data-loading-indicator .loading-spinner {
+    animation: none;
+    border-top-color: var(--gold-primary);
+    border-right-color: var(--gold-primary);
+  }
+  
+  .data-loading-indicator.active {
+    animation: none;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .data-loading-indicator {
+    padding: 25px 30px;
+    min-width: 200px;
+  }
+  
+  .data-loading-indicator .loading-spinner {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .data-loading-indicator .loading-text {
+    font-size: 14px;
+  }
+}
